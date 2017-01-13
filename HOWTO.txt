@@ -1,6 +1,18 @@
 How to...
 
-1. Compile the game with MinGW.
+1. Compile the game with Visual Studio 12 or newer.
+  1. Download and install DirectX 8.1 SDK. It can be difficult to find it now as it is old SDK, but here is a working download link:
+     http://dl.dropbox.com/u/32866936/dx81sdk_full.exe
+     (I used DirectX libraries and header files from the Windows Kits folder on my system drive (Windows Kits\8.1),
+     however I also needed d3dx.lib - I used d3dx9.lib instead, taken from DirectX SDK (June 2010).
+     If you want to use d3dx.lib you need to open colobot project and in project properties->Linker->Additional Dependencies
+     you need to change d3dx9.lib to d3dx.lib. Also I used dinput8.lib and to use it I had to change two lines of code in 
+     joystick.cpp)   
+  2. Open Colobot.sln in the Visual Studio and choose if you want to compile the project in debug or release mode.
+  3. Make sure that your Visual Studio knows the paths to DirectX libraries and header files.
+  4. Compile the project. The binaries should appear in the bin folder.
+
+2. Compile the game with MinGW.
 
   1. Download and install DirectX 8.1 SDK. It can be difficult to find it now as it is old SDK, but here is a working dowload link:
      http://dl.dropbox.com/u/32866936/dx81sdk_full.exe
@@ -18,10 +30,10 @@ How to...
   8. Type "make"
   9. Everything should compile without errors.
 
-2. Run the compiled game.
+3. Run the compiled game.
 
   1. Download and unpack the package with the game data files.
-  2. Copy the compiled files from bin/colobot.exe, bin/CBot/libCBot.dll
+  2. Copy the compiled files from bin/colobot.exe, bin/CBot/libCBot.dll (or CBot.dll)
      and from the directory, where MinGW is installed bin/libgcc_s_dw2-1.dll and bin/libstdc++-6.dll
      to the directory with game data (there should be several files named colobot*.dat).
   3. Create a shortcut to the colobot.exe executable and add to the executed command " -nocd" option.
@@ -41,7 +53,17 @@ PL
 
 Jak...
 
-1. Skompilować projekt pod MinGW.
+1. Skompilować projekt pod Visual Studio.
+  Jeśli nie wiesz i nie znasz angielskiego, a chcesz żebym napisał jak skompilować, to daj mi znać.
+  
+  Generalnie..
+  1. Musisz mieć DirectX SDK w wersji 8.1, ale ja użyłem bibliotek zainstalowanych w Windows Kits\8.1 i też działa.
+  Brakuje tylko d3dx.lib - ale ja użyłem d3dx9.lib, które wziąłem z DirectX SDK (June 2010).
+  2. Dalej tylko otwierasz projekt Colobot.sln i kompilujesz pod debug lub release. Upewnij się, że Visual Studio wie,
+  gdzie znajdują się pliki nagłówkowe i biblioteki od DirectX.
+  3. Pliki binarne powinny pojawić się w folderze bin.
+
+2. Skompilować projekt pod MinGW.
 
   1. Ściągamy i instalujemy DirectX SDK w wersji 8.1. Może być problem ze znalezieniem linka bo to już stary SDK, ale można ściągnąć stąd:
      http://dl.dropbox.com/u/32866936/dx81sdk_full.exe
@@ -59,10 +81,10 @@ Jak...
   8. Wpisujemy "make"
   9. Wszystko powinno się skomplikować bez błędów.
 
-2. Uruchomić skompilowaną grę.
+3. Uruchomić skompilowaną grę.
 
   1. Ściągamy paczkę z plikami danych gry.
-  2. Kopiujemy skompilowane pliki bin/colobot.exe, bin/CBot/libCBot.dll
+  2. Kopiujemy skompilowane pliki bin/colobot.exe, bin/CBot/libCBot.dll (lub CBot.dll)
      i z katalogu, gdzie jest zainstalowany MinGW bin/libgcc_s_dw2-1.dll i bin/libstdc++-6.dll
      do katalogu z plikami danych (powinno być tam kilka plików colobot*.dat).
   3. Tworzymy skrót do colobot.exe, przy czym w wywoływanej komendzie dopisujemy na końcu opcję " -nocd".
