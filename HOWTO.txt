@@ -61,7 +61,7 @@ Jak...
   Brakuje tylko d3dx.lib - ale ja użyłem d3dx9.lib, które wziąłem z DirectX SDK (June 2010).
   2. Dalej tylko otwierasz projekt Colobot.sln i kompilujesz pod debug lub release. Upewnij się, że Visual Studio wie,
   gdzie znajdują się pliki nagłówkowe i biblioteki od DirectX.
-  3. Pliki binarne powinny pojawić się w folderze bin.
+  3. Po udanej kompilacji, pliki binarne powinny pojawić się w folderze bin.
 
 2. Skompilować projekt pod MinGW.
 
