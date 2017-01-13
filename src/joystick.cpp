@@ -17,7 +17,7 @@
 // joystick.cpp
 
 #define STRICT
-#define DIRECTINPUT_VERSION 0x0700
+#define DIRECTINPUT_VERSION 0x0800
 
 #include <windows.h>
 #include <dinput.h>
@@ -123,14 +123,14 @@ BOOL InitDirectInput(HINSTANCE hInst, HWND hWnd)
     // Register with the DirectInput subsystem and get a pointer
     // to a IDirectInput interface we can use.
 #ifndef __MINGW32__ // FIXME Doesn't work under MinGW
-    hr = DirectInputCreateEx( hInst, DIRECTINPUT_VERSION,IID_IDirectInput7, (LPVOID*)&g_pDI, NULL );
+    hr = DirectInput8Create( hInst, DIRECTINPUT_VERSION,IID_IDirectInput7, (LPVOID*)&g_pDI, NULL );
     if( FAILED(hr) )  return FALSE;
 #else
     return FALSE;
 #endif
 
     // Look for a simple joystick we can use for this sample program.
-    hr = g_pDI->EnumDevices( DIDEVTYPE_JOYSTICK, EnumJoysticksCallback,
+    hr = g_pDI->EnumDevices( DI8DEVTYPE_JOYSTICK, EnumJoysticksCallback,
                              NULL, DIEDFL_ATTACHEDONLY );
     if( FAILED(hr) )  return FALSE;
 
