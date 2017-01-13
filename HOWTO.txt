@@ -39,7 +39,8 @@ How to...
   3. Create a shortcut to the colobot.exe executable and add to the executed command " -nocd" option.
   4. Run the shortcut and enjoy the game.
 
-3. But it's in French! How to change the language?
+3. But the game doesn't have letters, it's blank! Probably your game is compiled under different language than the
+language pack you have installed. How to change the language?
 
   1. In the source code, find language.h file and change the line #define FRENCH TRUE to #define FRENCH FALSE and do the reverse
      on on the language of your choice (English, German or Polish).
