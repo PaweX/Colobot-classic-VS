@@ -1,4 +1,4 @@
-Welcome to classic Colobot repository, originally cloned from TerranovaTeam's colobot repository.
+Welcome to my repository of classic Colobot, originally cloned from TerranovaTeam's original colobot repository.
 In this repository you can find project files that allow you to compile the code under VS12 or newer.
 
 See https://github.com/colobot/colobot/tree/colobot-original to find the original source.
@@ -13,7 +13,3 @@ Compiling and running the game
 The code can be compiled using the Visual Studio.
 
 For these instructions see HOWTO.txt file.
-
-Contact
-
-If you want to help in the project, please contact us on the forum on our website (there is also an English board).
