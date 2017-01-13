@@ -90,7 +90,7 @@ Jak...
   3. Tworzymy skrót do colobot.exe, przy czym w wywoływanej komendzie dopisujemy na końcu opcję " -nocd".
   4. Odpalamy skrót i cieszymy się grą.
 
-3. Ale gra jest po francusku! Jak zmienić język?
+3. Ale gra nie ma liter! Może skompilowałeś grę nie w tym języku? Jak zmienić język?
 
   1. W kodzie źródłowym znajdujemy plik language.h i zmieniamy  #define FRENCH TRUE na #define FRENCH FALSE i robimy odwrotnie
      dla wybranego języka (angielski, niemiecki lub polski).
