@@ -4,13 +4,13 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommand>"..\bin\.\$(TargetFileName)"</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>..\bin\</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>$(TargetFileName)</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)../bin/</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommand>"..\bin\.\$(TargetFileName)"</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>..\bin\</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>$(TargetFileName)</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)../bin/</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
